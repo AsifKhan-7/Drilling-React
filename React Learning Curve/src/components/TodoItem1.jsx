@@ -3,11 +3,11 @@ function TodoItem1() {
   let todoDate = "03/02/2025";
   return (
     <div className="container ">
-      <div class="row btn-layout">
-        <div class="col-6">{todoName}</div>
-        <div class="col-4">{todoDate}</div>
-        <div class="col-2">
-          <button type="button" class="btn btn-danger todo-btn">
+      <div className="row btn-layout">
+        <div className="col-6">{todoName}</div>
+        <div className="col-4">{todoDate}</div>
+        <div className="col-2">
+          <button type="button" className="btn btn-danger todo-btn">
             Delete
           </button>
         </div>
