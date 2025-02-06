@@ -1,9 +1,7 @@
-const ErrorMsg = () => {
-  let healthyFoodItems = ["Oats", "Salad", "Green Vegetables"];
-
+const ErrorMsg = ({ items }) => {
   return (
     <>
-      {healthyFoodItems.length === 0 && (
+      {items.length === 0 && (
         <h3 className="text-center my-3 fw-bolder">I'm still hungry.</h3>
       )}
       ;

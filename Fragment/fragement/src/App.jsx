@@ -12,8 +12,8 @@ function App() {
     <>
       <h1 className="text-center my-5 fw-bolder">Healthy Foods List</h1>
 
-      <ErrorMsg />
-      <FoodItems />
+      <FoodItems items={healthyFoodItems} />
+      <ErrorMsg items={healthyFoodItems} />
     </>
     // </React.Fragment>
   );
