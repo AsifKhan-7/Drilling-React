@@ -1,20 +1,5 @@
 /* ====== Todo App ======= */
 
-h1 {
-  font-weight: bold !important;
-  font-size: 2.8rem !important;
-  margin: 10px !important;
-  margin-bottom: 1.2rem !important;
-}
-
-input {
-  width: 100% !important;
-}
-
-.items-container {
-  text-align: left !important;
-}
-
 .btn-layout {
   margin: 10px 5px !important;
 }

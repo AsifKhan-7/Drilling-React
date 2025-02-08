@@ -1,12 +1,18 @@
+import styles from "../css-modules/AddTodo.module.css";
+
 function AddTodo() {
   return (
     <div className="container">
       <div className="row btn-layout">
         <div className="col-6">
-          <input type="text" placeholder="Input Todo here" />
+          <input
+            className={styles["value-input"]}
+            type="text"
+            placeholder="Input Todo here"
+          />
         </div>
         <div className="col-4">
-          <input type="date" />
+          <input className={styles["value-input"]} type="date" />
         </div>
 
         <div className="col-2">
