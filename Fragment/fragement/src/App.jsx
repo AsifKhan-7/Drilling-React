@@ -1,3 +1,4 @@
+import Container from "./components/Container";
 import FoodItems from "./components/FoodItems";
 import ErrorMsg from "./components/ErrorMsg";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -8,10 +9,20 @@ function App() {
 
   return (
     <>
-      <h1 className="fw-bolder heading">Healthy Foods List</h1>
+      <Container>
+        <h1 className="fw-bolder heading text-center">Healthy Foods List</h1>
+        <FoodItems items={healthyFoodItems} />
+        <ErrorMsg items={healthyFoodItems} />
+      </Container>
 
-      <FoodItems items={healthyFoodItems} />
-      <ErrorMsg items={healthyFoodItems} />
+      <Container>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores,
+          ea. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Asperiores, ea. ea. Lorem ipsum dolor sit amet consectetur adipisicing
+          elit. Asperiores, ea.
+        </p>
+      </Container>
     </>
   );
 }
