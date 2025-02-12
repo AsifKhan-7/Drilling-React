@@ -7,13 +7,16 @@ import "./App.css";
 
 function App() {
   let healthyFoodItems = ["Oats", "Salad", "Green Vegetables", "Milk"];
+  const handleOnChange = (event) => {
+    console.log(event.target.value);
+  };
 
   return (
     <>
       <Container>
         <h1 className="fw-bolder heading text-center">Healthy Foods List</h1>
         <ErrorMsg items={healthyFoodItems} />
-        <FoodInput />
+        <FoodInput handleOnChange={handleOnChange} />
         <FoodItems items={healthyFoodItems} />
       </Container>
 
