@@ -1,6 +1,6 @@
 .item {
-  background-color: bisque !important;
-  color: rgb(132, 95, 255) !important;
+  /* background-color: bisque !important; */
+  color: rgb(147, 147, 150) !important;
   font-weight: 600;
   font-style: italic;
 }

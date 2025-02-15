@@ -7,11 +7,7 @@ import "./App.css";
 import { useState } from "react";
 
 function App() {
-  let [healthyFoodItems, sethealthyFoodItems] = useState([
-    "Oats",
-    "Salad",
-    "Green Vegetables",
-  ]);
+  let [healthyFoodItems, sethealthyFoodItems] = useState([]);
 
   const OnKeydown = (event) => {
     if (event.key === "Enter") {
@@ -21,17 +17,14 @@ function App() {
       sethealthyFoodItems(newFoodItems);
       console.log(`User entered food item is : ${newFoodItems}`);
     }
-
-    // console.log(event.target.value);
-    // setTextState(event.target.value);
   };
 
   return (
     <>
       <Container>
         <h1 className="fw-bolder heading text-center">Healthy Foods List</h1>
-        <ErrorMsg items={healthyFoodItems} />
         <FoodInput handleOnKeydown={OnKeydown} />
+        <ErrorMsg items={healthyFoodItems} />
         <FoodItems items={healthyFoodItems} />
       </Container>
     </>
