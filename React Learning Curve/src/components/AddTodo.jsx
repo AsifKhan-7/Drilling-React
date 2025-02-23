@@ -1,6 +1,25 @@
+import { useState } from "react";
 import styles from "../css-modules/AddTodo.module.css";
 
-function AddTodo() {
+function AddTodo({ onNewChange }) {
+  const [todoName, setTodoName] = useState();
+  const [dueDate, setDueDate] = useState();
+
+  const handleNameChange = (event) => {
+    setTodoName(event.target.value);
+  };
+
+  const handleDateChange = (event) => {
+    setDueDate(event.target.value);
+  };
+
+  const handleAddButtonClicked = () => {
+    onNewChange(todoName, dueDate);
+
+    setTodoName("");
+    setDueDate("");
+  };
+
   return (
     <div className="container">
       <div className="row btn-layout">
@@ -9,14 +28,25 @@ function AddTodo() {
             className={styles["value-input"]}
             type="text"
             placeholder="Input Todo here"
+            value={todoName}
+            onChange={handleNameChange}
           />
         </div>
         <div className="col-4">
-          <input className={styles["value-input"]} type="date" />
+          <input
+            className={styles["value-input"]}
+            type="date"
+            value={dueDate}
+            onChange={handleDateChange}
+          />
         </div>
 
         <div className="col-2">
-          <button type="button" className="btn btn-success todo-btn">
+          <button
+            type="button"
+            className="btn btn-success todo-btn"
+            onClick={handleAddButtonClicked}
+          >
             Add
           </button>
         </div>
