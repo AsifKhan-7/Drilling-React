@@ -6,7 +6,7 @@ const TodoItems = ({ todoItems, onDeleteClick }) => {
     <div className={styles["items-container"]}>
       {todoItems.map((todoItem) => (
         <TodoItem
-          key={todoItem.id}
+          key={todoItem.name}
           todoName={todoItem.name}
           todoDate={todoItem.dueDate}
           onDeleteClick={onDeleteClick}
